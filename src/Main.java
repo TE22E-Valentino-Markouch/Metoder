@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Hello32();
@@ -12,42 +13,41 @@ public class Main {
         GetChoice();
     }
 
-    public static void Hello32(){
+    public static void Hello32() {
         for (int i = 0; i < 32; i++) {
             System.out.println("Hello World!");
         }
     }
 
-    public static void Kvadraten(int en){
+    public static void Kvadraten(int en) {
         int Kvadrat = en * en;
         System.out.println("Kvadraten av " + en + " är " + Kvadrat);
     }
 
-    public static Double Multi(Double ett, Double två){
+    public static Double Multi(Double ett, Double två) {
         double skibidi = ett * två;
         return skibidi;
 
     }
 
-    public static Double RightTriangleArea(Double base, Double height){
-        return (base*height) / 2;
+    public static Double RightTriangleArea(Double base, Double height) {
+        return (base * height) / 2;
     }
 
-    public static Double Cirkel(Double radie){
+    public static Double Cirkel(Double radie) {
         return radie * radie * 3.14;
     }
 
-    public static int GetNumberInput(){
+    public static int GetNumberInput() {
         int number = 0;
         Scanner scanner = new Scanner(System.in);
-        while(true){
+        while (true) {
             System.out.print("Skriv in ett tal: ");
             try {
                 number = scanner.nextInt();
                 scanner.nextLine();
                 break;
-            }
-            catch(Exception e){
+            } catch (Exception e) {
                 System.out.println("Ogiltlig Inmatning. Vänligen försök igen.");
                 scanner.nextLine();
             }
@@ -55,16 +55,16 @@ public class Main {
         return number;
     }
 
-    public static void GetChoice(){
+    public static void GetChoice() {
         String[] val = {"Hej", "Tjena", "Tjenare"};
         int svar = 0;
-        while(true){
+        while (true) {
             for (int i = 0; i < val.length; i++) {
                 System.out.println((i + 1) + ". " + val[i]);
             }
             System.out.println("Välj ett tal mellan 1 - 3");
             svar = GetNumberInput();
-            if(svar >= 1 && svar <= 3){
+            if (svar >= 1 && svar <= 3) {
                 break;
             } else {
 
@@ -73,31 +73,6 @@ public class Main {
         }
         System.out.println(val[svar - 1]);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
